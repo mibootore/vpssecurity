@@ -8,6 +8,8 @@ NEW_USER_PASSWORD="5^3ik7#XsZ3X&o"
 #主机名
 echo “srv1.mibootore.dns.navy” > /etc/hostname
 
+apt update && apt upgrade -y && apt dist-upgrade -y && apt full-upgrade -y && apt autoremove -y
+
 sudo apt install fail2ban -y
 sudo service fail2ban start
 
