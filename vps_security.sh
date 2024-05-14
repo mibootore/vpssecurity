@@ -3,7 +3,7 @@
 # 设置变量
 NEW_SSH_PORT=1234
 NEW_USER="mibootore"
-NEW_USER_PASSWORD="m1b00t0re"
+NEW_USER_PASSWORD="5^3ik7#XsZ3X&o"
 
 #主机名
 echo “srv1.mibootore.dns.navy” > /etc/hostname
