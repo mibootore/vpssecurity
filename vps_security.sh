@@ -33,6 +33,9 @@ if ! grep -q "^Port $NEW_SSH_PORT" /etc/ssh/sshd_config; then
   echo "Port $NEW_SSH_PORT" >> /etc/ssh/sshd_config
 fi
 
+# 重启SSH服务
+echo "Restarting SSH service..."
+systemctl restart sshd
 
 # 添加新用户
 echo "Adding new user..."
@@ -44,9 +47,7 @@ echo "Adding new user to sudoers..."
 echo "$NEW_USER ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/$NEW_USER
 chmod 0440 /etc/sudoers.d/$NEW_USER
 
-# 重启SSH服务
-echo "Restarting SSH service..."
-systemctl restart sshd
+
 
 # 输出完成信息
 echo "Configuration complete. Please login with the new user:"
